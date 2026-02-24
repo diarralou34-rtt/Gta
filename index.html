@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MiniCity — Prototype GTA-like</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#111111">
+</head>
+<body>
+<div id="ui">
+<div id="topbar">
+<div id="money">ARGENT: $<span id="money-value">0</span></div>
+<div id="score">SCORE: <span id="score-value">0</span></div>
+<div id="controls">Contrôles: WASD / flèches marcher • E entrer/sortir véhicule • SPACE freiner</div>
+</div>
+
+<canvas id="game" width="1200" height="700"></canvas>
+
+<div id="sidebar">
+<h2>MiniCity</h2>
+<p>Garage & Boutique — Voitures de luxe</p>
+<div id="car-list"></div>
+<div style="margin-top:10px;">
+<button id="save-btn">💾 Sauvegarder</button>
+<button id="load-btn">📂 Charger</button>
+</div>
+<hr>
+<h4>Missions</h4>
+<div id="mission-box">Aucune mission active</div>
+<button id="start-mission" style="margin-top:8px;">Démarrer mission</button>
+<hr>
+<h4>Infos</h4>
+<p>Double-clic sur la map = téléport (dev). Ouvre la console pour debug.</p>
+<p style="font-size:12px;color:#aaa">Projet prototype — code libre et modifiable.</p>
+</div>
+</div>
+
+<script src="app.js"></script>
+<script>
+// Register service worker for offline / PWA behavior
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('service-worker.js')
+.then(() => console.log('Service worker enregistré.'))
+.catch(e => console.warn('SW registration failed:', e));
+}
+</script>
+</body>
+</html>
