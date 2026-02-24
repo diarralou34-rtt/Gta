@@ -1,0 +1,16 @@
+{
+"name": "MiniCity",
+"short_name": "MiniCity",
+"start_url": ".",
+"display": "standalone",
+"background_color": "#08080a",
+"theme_color": "#111111",
+"description": "Prototype GTA-like — mini city, voitures de luxe, missions.",
+"icons": [
+{
+"src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA..." ,
+"sizes": "192x192",
+"type": "image/png"
+}
+]
+}
